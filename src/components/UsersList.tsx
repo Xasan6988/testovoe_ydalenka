@@ -23,7 +23,7 @@ export const UsersList: React.FC<UsersListProps> = ({users, selectFilter, select
   const sortHandler = (selectFilter: selectFilter, users: IUser[]): IUser[] => {
     if (selectFilter) {
       if (selectFilter === 'city') {
-        return users.sort(((a, b) => {
+          return users.sort(((a, b) => {
           if (a.address.city < b.address.city) {
             return -1;
           }
@@ -34,7 +34,7 @@ export const UsersList: React.FC<UsersListProps> = ({users, selectFilter, select
             return 0;
           }
           return 0 ;
-        }))
+        }));
       }
       if (selectFilter === 'companyName') {
           return users.sort(((a, b) => {
@@ -55,11 +55,11 @@ export const UsersList: React.FC<UsersListProps> = ({users, selectFilter, select
   }
 
   useEffect(() => {
-      setSorted(sortHandler(selectFilter, users))
-  }, [sorted, selectFilter])
+      setSorted([...sortHandler(selectFilter, users)])
+  }, [selectFilter])
 
   useEffect(() => {
-    setUserList(usersList(sorted))
+    setUserList([...usersList(sorted)])
   }, [sorted])
 
   return(
