@@ -1,0 +1,21 @@
+@import '../styles/variables.scss';
+
+.User {
+  background-color: $light-grey-color;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  font-size: 11px;
+  line-height: 13px;
+  .field-title {
+    color: $text-grey-color;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .more {
+    margin: auto 10px 10px auto;
+    color: $blue-color;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

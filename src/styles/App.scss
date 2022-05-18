@@ -1,0 +1,43 @@
+@import '../styles/variables.scss';
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto';
+
+  .Sidebar {
+    // flex-basis: 10%;
+    max-width: 152px;
+  }
+
+  .Users {
+    min-width: 520px;
+  }
+}
+
+.primary-btn {
+  font-size: 12px;
+  line-height: 14px;
+  color: white;
+  background-color: $blue-color;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}

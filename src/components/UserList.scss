@@ -1,0 +1,15 @@
+.UsersList {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 34px;
+
+  .users-list-title {
+    margin-top: 19px;
+    margin-bottom: 17px;
+  }
+  li {
+    margin-bottom: 14px;
+    // width: 420px;
+  }
+}

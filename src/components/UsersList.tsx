@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { IUser } from '../dto/User.dto';
 import { User } from './User';
 
+import './UserList.scss';
+
 export type selectFilter = false | 'city' | 'companyName'
 
 interface UsersListProps {
@@ -61,10 +63,11 @@ export const UsersList: React.FC<UsersListProps> = ({users, selectFilter, select
   }, [sorted])
 
   return(
-    <>
-      <ul className="UsersList">
+    <div className="UsersList">
+      <h1 className="users-list-title">Список пользователей</h1>
+      <ul className="users-list-list">
         {userList}
       </ul>
-    </>
+    </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Alert } from './Alert';
 import { Validate } from './Profile';
+import './UserData.scss';
 
 interface IUserData {
   name: string
@@ -34,7 +35,7 @@ export const UserData: React.FC<IUserData> = ({name, value, change, validate, ed
       <input
         disabled={!edit}
         required
-        className={alert && 'warn'}
+        className={'profile_userdata-input ' + (alert && 'warn')}
         type="text"
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => change(e.target.value)}

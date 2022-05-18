@@ -1,0 +1,22 @@
+@import "../styles/variables.scss";
+.Sidebar {
+  width: 152px;
+  background-color: #BDBDBD;
+  display: flex;
+  flex-direction: column;
+
+  :nth-child(n) {
+    margin-left: 20px;
+  }
+
+  .sidebar-title {
+    margin-top: 36px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+  .sidebar_btn {
+    margin-bottom: 10px;
+  }
+}

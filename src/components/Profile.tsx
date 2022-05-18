@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IUser } from '../dto/User.dto';
 import { UserData } from './UserData';
+import './Profile.scss';
 
 export interface Validate {
   complete: boolean
@@ -57,7 +58,7 @@ export const Profile: React.FC<Omit<IUser, 'company' | 'id'>> = ({name, username
     <div className="Profile">
       <header className="profile_header">
         <h1 className="profile_header_title">Профиль пользователя</h1>
-        <button className="primary profile-header-button" onClick={() => setEdit(true)}>Редактировать</button>
+        <button className="primary-btn profile-header-button" onClick={() => setEdit(true)}>Редактировать</button>
       </header>
       <main className="profile_main">
         <ul className="profile_main_list">
@@ -88,7 +89,7 @@ export const Profile: React.FC<Omit<IUser, 'company' | 'id'>> = ({name, username
         </ul>
       </main>
       <footer className="profile_footer">
-        <button className="profile_footer_btn" onClick={sendFormHandler}>Отправить</button>
+        <button className="profile_footer_btn" disabled={!edit} onClick={sendFormHandler}>Отправить</button>
       </footer>
     </div>
   )

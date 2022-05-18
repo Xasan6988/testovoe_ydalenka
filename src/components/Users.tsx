@@ -7,8 +7,8 @@ interface UsersProps {
 
 export const Users: React.FC<UsersProps> = (children) => {
   return(
-    <>
+    <div className='Users'>
       {children.children}
-    </>
+    </div>
   )
 }
